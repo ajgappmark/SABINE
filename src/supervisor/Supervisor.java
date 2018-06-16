@@ -28,30 +28,37 @@ public class Supervisor {
             byte[] sendData = new byte[1024];
 
             while (true) {
-                DatagramPacket rcv = new DatagramPacket(receiveData, receiveData.length);
-                _serverSocket.receive(rcv);
 
-                InetAddress clientAddress = rcv.getAddress();
-                int clientPort = rcv.getPort();
+                DatagramPacket receive = recv(receiveData,_port);
 
-                DatagramPacket response = new DatagramPacket(sendData, sendData.length, clientAddress, clientPort);
-                _serverSocket.send(response);
+                InetAddress clientAddress = receive.getAddress();
+                int clientPort = receive.getPort();
+
+                DatagramPacket sendPacket = send(sendData,clientAddress,clientPort);
+
             }
 
         } catch (SocketException e) {
             System.err.println("Socket creation");
             e.printStackTrace();
         } catch (IOException e) {
-            System.err.println("Socket receive");
+            System.err.println("Socket receive/send");
             e.printStackTrace();
         }
 
 
     }
 
-    public void send(byte[] data, InetAddress address, int port) throws IOException {
+    private DatagramPacket recv(byte[] data, int port) throws IOException {
+        DatagramPacket receive = new DatagramPacket(data, data.length);
+        _serverSocket.receive(receive);
+        return receive;
+    }
+
+    private DatagramPacket send(byte[] data, InetAddress address, int port) throws IOException {
         DatagramPacket sendPacket = new DatagramPacket(data, data.length, address, port);
         _serverSocket.send(sendPacket);
+        return sendPacket;
     }
 
 
