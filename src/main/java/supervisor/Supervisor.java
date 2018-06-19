@@ -50,9 +50,9 @@ public class Supervisor {
     }
 
     private DatagramPacket recv(byte[] data, int port) throws IOException {
-        DatagramPacket receive = new DatagramPacket(data, data.length);
-        _serverSocket.receive(receive);
-        return receive;
+        DatagramPacket receivePacket = new DatagramPacket(data, data.length);
+        _serverSocket.receive(receivePacket);
+        return receivePacket;
     }
 
     private DatagramPacket send(byte[] data, InetAddress address, int port) throws IOException {
