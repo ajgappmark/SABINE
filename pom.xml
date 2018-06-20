@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>SABINE</groupId>
     <artifactId>SABINE</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -35,8 +34,11 @@
         </dependency>
 
     </dependencies>
-
-
+  <modules>
+    <module>SABINE-supervisor</module>
+    <module>SABINE-bot</module>
+    <module>SABINE-web</module>
+    <module>SABINE-dao</module>
+    <module>SABINE-runnable</module>
+  </modules>
 </project>
-
-
