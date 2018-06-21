@@ -15,6 +15,7 @@ public class SupervisorHttpServer {
 
     /**
      * TODO: dynamic context
+     * TODO: multithreading
      *
      * @param port
      * @throws IOException
@@ -26,6 +27,15 @@ public class SupervisorHttpServer {
         httpServer.createContext("/", new HandlerDefault());
         httpServer.createContext("/ping", new HandlerPing());
         httpServer.createContext("/data", new HandlerData());
+        httpServer.setExecutor(null);
+    }
+
+    public void start() {
+        httpServer.start();
+    }
+
+    public void stop(int delay) {
+        httpServer.stop(delay);
     }
 
     public int getPort() {
@@ -39,4 +49,5 @@ public class SupervisorHttpServer {
     public String getAddressString() {
         return address.toString();
     }
+
 }
