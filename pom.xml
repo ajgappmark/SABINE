@@ -37,10 +37,10 @@
 
     </dependencies>
   <modules>
-    <module>SABINE-supervisor</module>
-    <module>SABINE-bot</module>
-    <module>SABINE-web</module>
-    <module>SABINE-dao</module>
-    <module>SABINE-runnable</module>
+    <module>supervisor</module>
+    <module>bot</module>
+    <module>web</module>
+    <module>dao</module>
+    <module>runnable</module>
   </modules>
 </project>

@@ -7,10 +7,9 @@
     <artifactId>SABINE</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>SABINE</groupId>
-  <artifactId>SABINE-web</artifactId>
+  <artifactId>dao</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>SABINE-web</name>
+  <name>dao</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
