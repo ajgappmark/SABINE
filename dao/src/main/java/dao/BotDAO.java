@@ -2,11 +2,11 @@ package dao;
 
 import bean.Bot;
 
-import java.util.List;
+import java.util.Set;
 
 public interface BotDAO {
 
-    List<Bot> getAllBots();
+    Set<Bot> getAllBots();
 
-    void updateBots(List<Bot> bots);
+    void updateBots(Set<Bot> bots);
 }

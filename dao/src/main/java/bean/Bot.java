@@ -2,6 +2,7 @@ package bean;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Bot {
 
@@ -10,6 +11,7 @@ public class Bot {
     private Map<Class, Object> info;
 
     public Bot() {
+        id = -1; /* Means that the object is not persistent yet */
         info = new HashMap<Class, Object>();
     }
 
@@ -28,4 +30,13 @@ public class Bot {
     public <T>void setInfo(Class<T> clazz, T object) {
         info.put(clazz, object);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Bot bot = (Bot) o;
+        return id == bot.id;
+    }
+
 }
