@@ -7,6 +7,7 @@ import supervisor.handler.HandlerPing;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.Objects;
 
 public class SupervisorHttpServer {
     private HttpServer httpServer;
@@ -48,6 +49,21 @@ public class SupervisorHttpServer {
 
     public String getAddressString() {
         return address.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SupervisorHttpServer server = (SupervisorHttpServer) o;
+        return port == server.port &&
+                Objects.equals(address, server.address);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(port, address);
     }
 
 }
