@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BotHttpClientTest extends TestCase {
+class BotHttpClientTest {
 
     @Test
     void GET() {

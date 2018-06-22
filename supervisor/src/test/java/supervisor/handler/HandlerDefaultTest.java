@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HandlerDefaultTest extends TestCase {
+class HandlerDefaultTest {
     private HandlerDefault d = new HandlerDefault();
     private int port = 9950;
 

@@ -8,18 +8,18 @@ import java.net.InetSocketAddress;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SupervisorHttpServerTest extends TestCase {
+class SupervisorHttpServerTest {
     private SupervisorHttpServer server;
     private int port = 9950;
 
     @BeforeEach
-    protected void setUp() throws IOException {
+    void setUp() throws IOException {
         server = new SupervisorHttpServer(port);
         server.start();
     }
 
     @AfterEach
-    protected void tearDown() {
+    void tearDown() {
         server.stop(0);
     }
 
