@@ -22,7 +22,7 @@ public class HandlerPing implements HttpHandler {
             response.append(key).append(" = ").append(POST.get(key)).append("\n");
         }
         util.sendResponse(httpExchange, response.toString());
-        return;
+
     }
 
 

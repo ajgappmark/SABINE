@@ -3,7 +3,6 @@ package supervisor.handler;
 import com.sun.net.httpserver.HttpExchange;
 
 import java.io.*;
-import java.net.URI;
 import java.util.HashMap;
 
 public class util {
