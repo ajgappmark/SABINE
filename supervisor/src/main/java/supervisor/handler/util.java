@@ -29,9 +29,8 @@ public class util {
 
         String[] lineSplit = line.split("[&=]");
         for (int i = 0; i < lineSplit.length; i++) {
-            post.put(lineSplit[i++], lineSplit[i++]);
+            post.put(lineSplit[i++], lineSplit[i]);
         }
-
         return post;
     }
 }
