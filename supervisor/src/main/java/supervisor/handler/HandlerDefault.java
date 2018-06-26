@@ -10,11 +10,10 @@ public class HandlerDefault implements HttpHandler {
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
         int port = httpExchange.getLocalAddress().getPort();
+
         String response = getResponse(port);
-        httpExchange.sendResponseHeaders(200, response.length());
-        OutputStream os = httpExchange.getResponseBody();
-        os.write(response.getBytes());
-        os.close();
+
+        util.sendResponse(httpExchange, response);
     }
 
     public String getResponse(int port) {

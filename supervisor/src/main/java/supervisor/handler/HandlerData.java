@@ -11,9 +11,7 @@ public class HandlerData implements HttpHandler {
     public void handle(HttpExchange httpExchange) throws IOException {
         String response = "DATA";
 
-        httpExchange.sendResponseHeaders(200, response.length());
-        OutputStream os = httpExchange.getResponseBody();
-        os.write(response.getBytes());
-        os.close();
+        util.sendResponse(httpExchange, response);
+
     }
 }
