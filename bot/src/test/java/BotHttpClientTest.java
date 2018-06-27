@@ -1,14 +1,17 @@
-import junit.framework.TestCase;
-import org.junit.jupiter.api.*;
+import org.junit.Test;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-class BotHttpClientTest {
+public class BotHttpClientTest {
 
     @Test
-    void GET() {
+    public void GET() {
+
+    }
+
+    @Test
+    public void POST() {
 
     }
 }
