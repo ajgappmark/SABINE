@@ -1,5 +1,3 @@
-package bot;
-
 import org.apache.http.client.fluent.Form;
 import org.apache.http.client.fluent.Request;
 

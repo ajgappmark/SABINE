@@ -1,9 +1,7 @@
-package supervisor;
-
 import com.sun.net.httpserver.HttpServer;
-import supervisor.handler.HandlerData;
-import supervisor.handler.HandlerDefault;
-import supervisor.handler.HandlerPing;
+import handler.HandlerData;
+import handler.HandlerDefault;
+import handler.HandlerPing;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

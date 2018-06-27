@@ -1,5 +1,3 @@
-package supervisor;
-
 import java.io.IOException;
 
 public class Supervisor {

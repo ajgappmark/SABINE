@@ -1,10 +1,9 @@
-package supervisor.handler;
+package handler;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 import java.io.*;
-import java.net.URI;
 import java.util.HashMap;
 
 public class HandlerPing implements HttpHandler {

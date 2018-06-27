@@ -1,4 +1,4 @@
-package supervisor.handler;
+package handler;
 
 import com.sun.net.httpserver.HttpExchange;
 

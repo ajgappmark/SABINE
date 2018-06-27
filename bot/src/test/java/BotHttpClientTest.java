@@ -1,5 +1,3 @@
-package bot;
-
 import junit.framework.TestCase;
 import org.junit.jupiter.api.*;
 

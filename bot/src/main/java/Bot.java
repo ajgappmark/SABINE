@@ -1,8 +1,3 @@
-package bot;
-
-import org.apache.http.client.HttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
-
 import java.io.IOException;
 import java.util.HashMap;
 

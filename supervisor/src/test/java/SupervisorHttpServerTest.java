@@ -1,6 +1,3 @@
-package supervisor;
-
-import junit.framework.TestCase;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;
