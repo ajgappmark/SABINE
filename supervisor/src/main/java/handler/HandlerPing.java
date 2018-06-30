@@ -9,6 +9,7 @@ import java.util.HashMap;
 public class HandlerPing implements HttpHandler {
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
+        System.out.println(util.getPrompt() + "PING from " + httpExchange.getRemoteAddress().toString());
         HashMap<String, String> POST;
 
         StringBuilder response = new StringBuilder();

@@ -16,7 +16,7 @@ public class SupervisorHttpServer {
      * TODO: dynamic context
      * TODO: multithreading
      *
-     * @param port
+     * @param port port
      * @throws IOException
      */
     public SupervisorHttpServer(int port) throws IOException {
@@ -60,7 +60,6 @@ public class SupervisorHttpServer {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(port, address);
     }
 

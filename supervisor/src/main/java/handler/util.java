@@ -3,9 +3,13 @@ package handler;
 import com.sun.net.httpserver.HttpExchange;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 
 public class util {
+
 
     static void sendResponse(HttpExchange httpExchange, String response) throws IOException {
         httpExchange.sendResponseHeaders(200, response.length());
@@ -32,5 +36,16 @@ public class util {
             post.put(lineSplit[i++], lineSplit[i]);
         }
         return post;
+    }
+
+    public static String getPrompt() {
+        Date d = new Date();
+        return "[" + getFormattedDate(d) + "] -> ";
+    }
+
+    public static String getFormattedDate(Date d) {
+        String format = "yyyy-MM-dd HH:mm:ss";
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
+        return dateFormat.format(d);
     }
 }
