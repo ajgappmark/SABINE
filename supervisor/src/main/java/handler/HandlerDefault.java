@@ -8,6 +8,8 @@ import java.io.IOException;
 public class HandlerDefault implements HttpHandler {
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
+        System.out.println(util.getPrompt() + "/ from " + httpExchange.getRemoteAddress().toString());
+
         int port = httpExchange.getLocalAddress().getPort();
 
         String response = getResponse(port);
