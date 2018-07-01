@@ -1,7 +1,10 @@
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.PriorityQueue;
 
 public class Bot {
+
+    private String supervisorAdress;
 
     public static void main(String[] args) {
         try {
